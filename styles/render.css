@@ -16,6 +16,11 @@ body a {
 body a, body p {
   color: #333333;
 }
+body input, body textarea {
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  border: 1px solid rgba(51, 51, 51, 0.3);
+}
 
 .btn {
   padding: 14px 44px;
@@ -65,7 +70,6 @@ body a, body p {
 }
 
 .home {
-  width: 1144px;
   height: 680px;
   display: flex;
   flex-direction: column;
@@ -73,10 +77,12 @@ body a, body p {
   align-self: center;
   align-items: center;
   background: url(../imgs/image-silder.png);
+  background-size: cover;
   color: #fff;
 }
 .home > .home__content {
   width: 680px;
+  width: 1144px;
   height: fit-content;
   margin: 0px auto;
   text-align: center;
@@ -91,12 +97,14 @@ body a, body p {
   font-weight: 600;
 }
 .home > .home__content > .home__description {
+  margin: 0 auto;
+  width: 680px;
   font-size: 20px;
   margin-top: 32px;
 }
 .home > .home__btn {
   font-weight: 700;
-  margin-top: 58px;
+  margin-top: 35px;
   display: inline-block;
   border: 1px solid #fff;
   color: inherit;
@@ -149,6 +157,76 @@ body a, body p {
   margin: 24px;
   text-align: center;
   width: fit-content;
+}
+
+.contact {
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 70px;
+}
+.contact > .contact__content {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background: url("../imgs/image-silder.png");
+  padding: 70px 0;
+  color: #fff;
+}
+.contact > .contact__content > .contact-content__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.contact > .contact__content > .contact-content_description {
+  margin: auto;
+  width: 500px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.contact > .contact__input {
+  display: grid;
+  grid-auto-columns: 3.5fr 6.5fr;
+  grid-template-areas: "inputs map";
+  grid-gap: 50px;
+  width: 1144px;
+  margin: 70px auto;
+}
+.contact > .contact__input > .input-form {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-self: stretch;
+  align-items: flex-start;
+}
+.contact > .contact__input > .input-form > input, .contact > .contact__input > .input-form textarea {
+  width: 100%;
+  padding: 13px 16px;
+  margin-bottom: 28px;
+}
+.contact > .contact__input > .input-form > .form-btn {
+  background-color: #121212;
+  color: #fff;
+}
+.contact > .contact__input > .map > .map__img > img {
+  width: 100%;
+}
+.contact > .contact__input > .map > .map__img > .map-address {
+  margin-top: 40px;
+  display: grid;
+  grid-gap: 31px;
+  grid-template-areas: "address1 adress2";
+  grid-auto-columns: 5.5fr 4.5fr;
+}
+.contact > .contact__input > .map > .map__img > .map-address > .address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact > .contact__input > .map > .map__img > .map-address > .address > img {
+  margin-right: 16px;
 }
 
 .about {
@@ -261,6 +339,53 @@ body a, body p {
     order: 1;
   }
 
+  .contact {
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 70px;
+  }
+  .contact > .contact__input {
+    width: 960px;
+    margin: 70px auto;
+  }
+  .contact > .contact__input > .input-form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+  }
+  .contact > .contact__input > .input-form > input, .contact > .contact__input > .input-form textarea {
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 28px;
+  }
+  .contact > .contact__input > .input-form > .form-btn {
+    background-color: #121212;
+    color: #fff;
+  }
+  .contact > .contact__input > .map > .map__img > img {
+    width: 100%;
+  }
+  .contact > .contact__input > .map > .map__img > .map-address {
+    margin-top: 40px;
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-areas: "address1";
+    width: 100%;
+    grid-auto-columns: 1fr;
+    text-align: left;
+    justify-content: start;
+  }
+  .contact > .contact__input > .map > .map__img > .map-address > .address {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .contact > .contact__input > .map > .map__img > .map-address > .address > img {
+    margin-right: 16px;
+  }
+
   .project, .footer {
     width: 960px;
   }
@@ -273,6 +398,67 @@ body a, body p {
   }
 }
 @media screen and (max-width: 800px) {
+  .home {
+    width: 100%;
+    background-size: cover;
+  }
+  .home > .home__content {
+    width: 100%;
+  }
+  .home > .home__content > .home__title {
+    font-size: 32px;
+    width: 350px;
+  }
+  .home > .home__content > .home__description {
+    width: 500px;
+  }
+  .home .contact {
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 70px;
+  }
+  .home > .contact__input {
+    width: 720px;
+    margin: 70px auto;
+  }
+  .home > .contact__input > .input-form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+  }
+  .home > .contact__input > .input-form > input, .home > .contact__input > .input-form textarea {
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 28px;
+  }
+  .home > .contact__input > .input-form > .form-btn {
+    background-color: #121212;
+    color: #fff;
+  }
+  .home > .contact__input > .map > .map__img > img {
+    width: 100%;
+  }
+  .home > .contact__input > .map > .map__img > .map-address {
+    margin-top: 40px;
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-areas: "address1";
+    width: 100%;
+    grid-auto-columns: 1fr;
+    text-align: left;
+    justify-content: start;
+  }
+  .home > .contact__input > .map > .map__img > .map-address > .address {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .home > .contact__input > .map > .map__img > .map-address > .address > img {
+    margin-right: 16px;
+  }
+
   .header {
     width: 720px;
     height: 80px;
@@ -290,6 +476,53 @@ body a, body p {
 
   .project, .footer {
     width: 720px;
+  }
+
+  .contact {
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 70px;
+  }
+  .contact > .contact__input {
+    width: 720px;
+    margin: 70px auto;
+  }
+  .contact > .contact__input > .input-form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+  }
+  .contact > .contact__input > .input-form > input, .contact > .contact__input > .input-form textarea {
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 28px;
+  }
+  .contact > .contact__input > .input-form > .form-btn {
+    background-color: #121212;
+    color: #fff;
+  }
+  .contact > .contact__input > .map > .map__img > img {
+    width: 100%;
+  }
+  .contact > .contact__input > .map > .map__img > .map-address {
+    margin-top: 40px;
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-areas: "address1";
+    width: 100%;
+    grid-auto-columns: 1fr;
+    text-align: left;
+    justify-content: start;
+  }
+  .contact > .contact__input > .map > .map__img > .map-address > .address {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .contact > .contact__input > .map > .map__img > .map-address > .address > img {
+    margin-right: 16px;
   }
 
   .project > .project__grid {
@@ -347,6 +580,9 @@ body a, body p {
     font-size: 32px;
     width: 257px;
   }
+  .home > .home__content > .home__description {
+    width: 96%;
+  }
 
   .header {
     width: 375px;
@@ -361,6 +597,63 @@ body a, body p {
   }
   .header > .header__nav > .nav__search {
     order: 1;
+  }
+
+  .contact .contact__content {
+    width: 100%;
+  }
+  .contact .contact__content > .contact-content__title {
+    font-size: 24px;
+  }
+  .contact .contact__content > .contact-content_description {
+    margin: auto;
+    width: 345px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .contact > .contact__input {
+    width: 375px;
+    margin: 70px auto;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "inputs";
+  }
+  .contact > .contact__input > .input-form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+  }
+  .contact > .contact__input > .input-form > input, .contact > .contact__input > .input-form textarea {
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 28px;
+  }
+  .contact > .contact__input > .input-form > .form-btn {
+    background-color: #121212;
+    color: #fff;
+  }
+  .contact > .contact__input > .map > .map__img > img {
+    width: 100%;
+  }
+  .contact > .contact__input > .map > .map__img > .map-address {
+    margin-top: 40px;
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-areas: "address1";
+    width: 100%;
+    grid-auto-columns: 1fr;
+    text-align: left;
+    justify-content: start;
+  }
+  .contact > .contact__input > .map > .map__img > .map-address > .address {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .contact > .contact__input > .map > .map__img > .map-address > .address > img {
+    margin-right: 16px;
   }
 
   .project, .footer {

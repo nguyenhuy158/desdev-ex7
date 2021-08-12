@@ -20,6 +20,11 @@ body
 	a, p
 		color: $primaryColor
 
+	input, textarea
+		font-family: 'Montserrat', sans-serif
+		outline: none
+		border: 1px solid rgba(51, 51, 51, 0.3)
+
 .btn
 	padding: 14px 44px
 	text-decoration: none
@@ -66,7 +71,7 @@ body
 				color: $secondColor
 
 .home
-	width: $widthContainer
+	// margin: 0 auto
 	height: 680px
 	display: flex
 	flex-direction: column
@@ -74,10 +79,12 @@ body
 	align-self: center
 	align-items: center
 	background: url(../imgs/image-silder.png)
+	background-size: cover
 	color: $secondColor
 
 	> .home__content
 		width: 680px
+		width: $widthContainer
 		height: fit-content
 		margin: 0px auto
 		text-align: center
@@ -91,11 +98,13 @@ body
 			text-transform: uppercase
 			font-weight: 600
 		> .home__description
+			margin: 0 auto
+			width: 680px
 			font-size: 20px
 			margin-top: 32px
 	> .home__btn
 		font-weight: 700
-		margin-top: 58px
+		margin-top: 35px
 		display: inline-block
 		border: 1px solid $secondColor
 		color: inherit
@@ -151,6 +160,72 @@ body
 				margin: 24px
 				text-align: center
 				width: fit-content
+
+.contact
+	width: 100%
+	background-color: $secondColor
+	padding-bottom: 70px
+	> .contact__content
+		width: 100%
+		text-align: center
+		margin: 0 auto
+		background: url("../imgs/image-silder.png")
+		padding: 70px 0
+		color: $secondColor
+		> .contact-content__title
+			font-weight: 700
+			font-size: 36px
+			line-height: 44px
+			letter-spacing: 0.06em
+			text-transform: uppercase
+		> .contact-content_description
+			margin: auto
+			width: 500px
+			font-weight: 400
+			font-size: 16px
+			line-height: 26px
+
+	> .contact__input
+		display: grid
+		grid-auto-columns: 3.5fr 6.5fr
+		grid-template-areas: "inputs map"
+		grid-gap: 50px
+		width: $widthContainer
+		margin: 70px auto
+		> .input-form
+			display: flex
+			justify-content: flex-start
+			flex-direction: column
+			align-self: stretch
+			align-items: flex-start
+
+			> input, textarea
+				width: 100%
+				padding: 13px 16px
+				margin-bottom: 28px
+
+			> .form-btn
+				background-color: $secondBackground
+				color: $secondColor
+				// margin-left: 0
+
+		> .map
+			> .map__img
+				> img
+					width: 100%
+				> .map-address
+					margin-top: 40px
+					display: grid
+					grid-gap: 31px
+					grid-template-areas: "address1 adress2"
+					grid-auto-columns: 5.5fr 4.5fr
+					> .address
+						display: flex
+						// flex-direction: column
+						justify-content: center
+						align-items: center
+						> img
+							margin-right: 16px
 
 .about
 	padding: 130px 0
@@ -265,7 +340,6 @@ body
 			> a
 				padding: 0px 28px
 				border-right: 1px solid rgba(51, 51, 51, 0.3)
-x
 
 @media screen and (max-width: 1000px)
 	$widthContainer: 960px
@@ -294,6 +368,52 @@ x
 			>.nav__search
 				order: 1
 
+	.contact
+		width: 100%
+		background-color: $secondColor
+		padding-bottom: 70px
+
+		> .contact__input
+			width: $widthContainer
+			margin: 70px auto
+			> .input-form
+				display: flex
+				justify-content: flex-start
+				flex-direction: column
+				align-self: stretch
+				align-items: flex-start
+
+				> input, textarea
+					width: 100%
+					padding: 13px 16px
+					margin-bottom: 28px
+
+				> .form-btn
+					background-color: $secondBackground
+					color: $secondColor
+					// margin-left: 0
+
+			> .map
+				> .map__img
+					> img
+						width: 100%
+					> .map-address
+						margin-top: 40px
+						display: grid
+						grid-row-gap: 30px
+						grid-template-areas: "address1"
+						width: 100%
+						grid-auto-columns: 1fr
+						text-align: left
+						justify-content: start
+						> .address
+							display: flex
+							// flex-direction: column
+							justify-content: flex-start
+							align-items: center
+							> img
+								margin-right: 16px
+
 	.project, .footer
 		width: $widthContainer
 	.footer
@@ -305,6 +425,64 @@ x
 
 @media screen and (max-width: 800px)
 	$widthContainer: 720px
+
+	.home
+		width: 100%
+		background-size: cover
+		// back
+		> .home__content
+			width: 100%
+			>.home__title
+				font-size: 32px
+				width: 350px
+			> .home__description
+				width: 500px
+
+		.contact
+			width: 100%
+			background-color: $secondColor
+			padding-bottom: 70px
+
+		> .contact__input
+			width: $widthContainer
+			margin: 70px auto
+			> .input-form
+				display: flex
+				justify-content: flex-start
+				flex-direction: column
+				align-self: stretch
+				align-items: flex-start
+
+				> input, textarea
+					width: 100%
+					padding: 13px 16px
+					margin-bottom: 28px
+
+				> .form-btn
+					background-color: $secondBackground
+					color: $secondColor
+					// margin-left: 0
+
+			> .map
+				> .map__img
+					> img
+						width: 100%
+					> .map-address
+						margin-top: 40px
+						display: grid
+						grid-row-gap: 30px
+						grid-template-areas: "address1"
+						width: 100%
+						grid-auto-columns: 1fr
+						text-align: left
+						justify-content: start
+						> .address
+							display: flex
+							// flex-direction: column
+							justify-content: flex-start
+							align-items: center
+							> img
+								margin-right: 16px
 
 	.header
 		width: $widthContainer
@@ -333,6 +511,52 @@ x
 
 	.project, .footer
 		width: $widthContainer
+
+	.contact
+		width: 100%
+		background-color: $secondColor
+		padding-bottom: 70px
+
+		> .contact__input
+			width: $widthContainer
+			margin: 70px auto
+			> .input-form
+				display: flex
+				justify-content: flex-start
+				flex-direction: column
+				align-self: stretch
+				align-items: flex-start
+
+				> input, textarea
+					width: 100%
+					padding: 13px 16px
+					margin-bottom: 28px
+
+				> .form-btn
+					background-color: $secondBackground
+					color: $secondColor
+					// margin-left: 0
+
+			> .map
+				> .map__img
+					> img
+						width: 100%
+					> .map-address
+						margin-top: 40px
+						display: grid
+						grid-row-gap: 30px
+						grid-template-areas: "address1"
+						width: 100%
+						grid-auto-columns: 1fr
+						text-align: left
+						justify-content: start
+						> .address
+							display: flex
+							// flex-direction: column
+							justify-content: flex-start
+							align-items: center
+							> img
+								margin-right: 16px
 
 	.project
 		// height: fit-content
@@ -388,6 +612,8 @@ x
 			>.home__title
 				font-size: 32px
 				width: 257px
+			> .home__description
+				width: 96%
 
 	.header
 		width: $widthContainer
@@ -413,6 +639,61 @@ x
 
 			>.nav__search
 				order: 1
+
+	.contact
+		.contact__content
+			width: 100%
+			> .contact-content__title
+				font-size: 24px
+			> .contact-content_description
+				margin: auto
+				width: 345px
+				font-weight: 400
+				font-size: 16px
+				line-height: 26px
+
+		> .contact__input
+			width: $widthContainer
+			margin: 70px auto
+			grid-auto-columns: 1fr
+			grid-template-areas: "inputs"
+			> .input-form
+				display: flex
+				justify-content: flex-start
+				flex-direction: column
+				align-self: stretch
+				align-items: flex-start
+
+				> input, textarea
+					width: 100%
+					padding: 13px 16px
+					margin-bottom: 28px
+
+				> .form-btn
+					background-color: $secondBackground
+					color: $secondColor
+					// margin-left: 0
+
+			> .map
+				> .map__img
+					> img
+						width: 100%
+					> .map-address
+						margin-top: 40px
+						display: grid
+						grid-row-gap: 30px
+						grid-template-areas: "address1"
+						width: 100%
+						grid-auto-columns: 1fr
+						text-align: left
+						justify-content: start
+						> .address
+							display: flex
+							// flex-direction: column
+							justify-content: flex-start
+							align-items: center
+							> img
+								margin-right: 16px
 
 	.project, .footer
 		width: $widthContainer
