@@ -10,12 +10,14 @@ $primaryBackground: #C4C4C4
 $secondBackground: #121212
 $primaryColor: #333333
 $secondColor: #fff
+$widthContainer: 1144px
 body
 	background: $primaryBackground
 	// font-family: Roboto, sans-serif
 	font-family: 'Montserrat', sans-serif
 	a
 		text-decoration: none
+	a, p
 		color: $primaryColor
 
 .btn
@@ -27,17 +29,19 @@ body
 	cursor: pointer
 
 .header
-	width: 100%
-	height: 90px
+	width: $widthContainer
+	height: 80px
+	margin: 0 auto
 	padding: 25px 0
 
 	display: flex
-	justify-content: space-around
+	justify-content: space-between
 	align-items: center
 
 	position: absolute
 	top: 0px
-	left: 0px
+	left: 50%
+	transform: translateX(-50%)
 
 	> .header__nav
 		display: flex
@@ -62,7 +66,7 @@ body
 				color: $secondColor
 
 .home
-	width: 100%
+	width: $widthContainer
 	height: 680px
 	display: flex
 	flex-direction: column
@@ -81,19 +85,23 @@ body
 			margin: 0 auto
 			width: 500px
 			font-size: 62px
-			font-weigth: 600px
+			font-weight: 600
 
+			letter-spacing: 0.2em
+			text-transform: uppercase
+			font-weight: 600
 		> .home__description
 			font-size: 20px
 			margin-top: 32px
 	> .home__btn
+		font-weight: 700
 		margin-top: 58px
 		display: inline-block
 		border: 1px solid $secondColor
 		color: inherit
 
 .project
-	width: auto
+	width: $widthContainer
 	height: fit-content
 	margin: 70px auto
 
@@ -112,7 +120,7 @@ body
 	> .project__grid
 		margin: auto
 		max-width: 1104px
-		height: 568px
+		height: fit-content
 
 		display: grid
 		grid-auto-columns: 1fr 1fr 1fr
@@ -202,14 +210,22 @@ body
 					margin-bottom: 18px
 
 .footer
-	width: 100%
-	height: 285px
-	margin: 0
-	padding: 70px 113px
+	width: $widthContainer
+	height: fit-content
+	margin: auto
+	// padding: 70px 113px
+	display: flex
+	justify-content: center
+	flex-direction: column
+
 	> .footer__nav
+		width: 100%
+		margin: 70px auto 0
+		padding-bottom: 44px
 		display: flex
 		justify-content: space-between
 		align-items: center
+		// border-bottom: 1px solid rgba(51, 51, 51, 0.3)
 
 		> .nav__list
 			font-style: normal
@@ -222,13 +238,17 @@ body
 
 			> a:not(:last-child)
 				margin-right: 44px
+				// border-right: 1px solid rgba(51, 51, 51, 0.3)
 
 		> .nav__social
 			font-size: 16px
 			>a:not(:last-child)
 				margin-right: 36px
-
+	> .slide
+		// margin: 0
 	> .footer__below
+		width: 1140px
+		margin: 44px 0 70px
 		display: flex
 		justify-content: space-between
 		align-items: center
@@ -236,6 +256,231 @@ body
 		font-weight: 400
 		line-height: 17px
 		> .copyright
+			> p
+				// color: $
 		> .termsOfService
-			> a:not(:last-child)
-				margin-right: 56px
+			> a:last-child
+				padding-right: 0
+				border-right: none
+			> a
+				padding: 0px 28px
+				border-right: 1px solid rgba(51, 51, 51, 0.3)
+x
+
+@media screen and (max-width: 1000px)
+	$widthContainer: 960px
+
+	.header
+		width: $widthContainer
+		height: 80px
+		margin: 0 auto
+		justify-content: space-between
+		left: 50%
+		transform: translateX(-50%)
+
+		> .header__nav
+			>.nav__list
+				// order: 2
+				// visibility: hidden
+				// // display: none
+				// &::before
+				// 	visibility: visible
+				// 	content: "\f002"
+				// 	font-family: "Font Awesome 5 Free"
+				// 	// width: 10px
+				// 	// height: 10px
+				// 	background-color: red
+
+			>.nav__search
+				order: 1
+
+	.project, .footer
+		width: $widthContainer
+	.footer
+		> .footer__nav
+			width: $widthContainer
+
+		> .footer__below
+			width: $widthContainer
+
+@media screen and (max-width: 800px)
+	$widthContainer: 720px
+
+	.header
+		width: $widthContainer
+		height: 80px
+		margin: 0 auto
+		justify-content: space-between
+		left: 50%
+		transform: translateX(-50%)
+
+		> .header__nav
+			>.nav__list
+				display: none
+				// order: 2
+				// visibility: hidden
+				// // display: none
+				// &::before
+				// 	visibility: visible
+				// 	content: "\f002"
+				// 	font-family: "Font Awesome 5 Free"
+				// 	// width: 10px
+				// 	// height: 10px
+				// 	background-color: red
+
+			>.nav__search
+				order: 1
+
+	.project, .footer
+		width: $widthContainer
+
+	.project
+		// height: fit-content
+		>.project__grid
+			grid-auto-columns: 1fr 1fr
+			grid-template-areas: "project project"
+
+	.about
+		>.about-grid
+			grid-auto-columns: 1fr
+			grid-template-areas: "about-content" "about-img"
+			> .about__img
+				margin-top: 86px
+				grid-area: about-img
+			> .about__content
+				grid-area: about-content
+
+	.footer
+		// margin: 0
+		> .footer__nav
+			min-width: 100%
+			padding-left: 26px
+			padding-right: 26px
+			padding-bottom: 20px
+			margin-top: 34px
+
+		> .footer__nav
+			width: $widthContainer
+			> .nav__list
+				display: none
+
+		> .footer__below
+			margin-top: 20px
+			width: $widthContainer
+
+			> .termsOfService
+				> a
+					padding: 0px 16px
+					border-right: 1px solid rgba(51, 51, 51, 0.3)
+				> a:last-child
+					padding-right: 0
+					border-right: none
+
+@media screen and (max-width: 400px)
+	$widthContainer: 375px
+
+	.home
+		width: 100%
+		background-size: cover
+		// back
+		> .home__content
+			width: 100%
+			>.home__title
+				font-size: 32px
+				width: 257px
+
+	.header
+		width: $widthContainer
+		height: 80px
+		margin: 0 auto
+		justify-content: space-between
+		left: 50%
+		transform: translateX(-50%)
+
+		> .header__nav
+			>.nav__list
+				display: none
+				// order: 2
+				// visibility: hidden
+				// // display: none
+				// &::before
+				// 	visibility: visible
+				// 	content: "\f002"
+				// 	font-family: "Font Awesome 5 Free"
+				// 	// width: 10px
+				// 	// height: 10px
+				// 	background-color: red
+
+			>.nav__search
+				order: 1
+
+	.project, .footer
+		width: $widthContainer
+
+	.project
+		// height: fit-content
+		>.project__grid
+			grid-auto-columns: 1fr
+			grid-template-areas: "project"
+
+	.about
+		>.about-grid
+			grid-auto-columns: 1fr
+			grid-template-areas: "about-content" "about-img"
+			> .about__img
+				margin-top: 86px
+				grid-area: about-img
+				> img:first-child
+					width: 80%
+				> img:last-child
+					width: 100%
+			> .about__content
+				grid-area: about-content
+
+	.footer
+
+		// margin: 0
+		> .footer__nav
+			order: 1
+			min-width: 100%
+			padding-left: 26px
+			padding-right: 26px
+			padding-bottom: 20px
+			margin-top: 34px
+
+		> .footer__nav
+			width: $widthContainer
+			flex-direction: column
+			> .nav__list
+				display: none
+			> .nav__social
+				margin-top: 24px
+		>.slide
+			// order: 2
+			display: none
+
+		> .footer__below
+			order: 3
+			margin-top: 20px
+			width: $widthContainer
+			flex-direction: column
+
+			>.copyright
+				order: 2
+				margin-top: 24px
+				width: 100%
+				border-top: 1px solid rgba(51, 51, 51, 0.3)
+				> p
+					text-align: center
+					margin-top: 24px
+
+			> .termsOfService
+				order: 1
+				display: flex
+				flex-direction: column
+				> a
+					text-align: center
+					padding: none
+					border-right: none
+				> a:not(:last-child)
+					margin-bottom: 16px
