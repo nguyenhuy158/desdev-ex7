@@ -32,7 +32,7 @@ body input, body textarea {
 }
 
 .header {
-  width: 1144px;
+  width: 85%;
   height: 80px;
   margin: 0 auto;
   padding: 25px 0;
@@ -82,7 +82,7 @@ body input, body textarea {
 }
 .home > .home__content {
   width: 680px;
-  width: 1144px;
+  width: 85%;
   height: fit-content;
   margin: 0px auto;
   text-align: center;
@@ -111,7 +111,7 @@ body input, body textarea {
 }
 
 .project {
-  width: 1144px;
+  width: 85%;
   height: fit-content;
   margin: 70px auto;
 }
@@ -191,7 +191,7 @@ body input, body textarea {
   grid-auto-columns: 3.5fr 6.5fr;
   grid-template-areas: "inputs map";
   grid-gap: 50px;
-  width: 1144px;
+  width: 85%;
   margin: 70px auto;
 }
 .contact > .contact__input > .input-form {
@@ -274,7 +274,7 @@ body input, body textarea {
 }
 
 .footer {
-  width: 1144px;
+  width: 85%;
   height: fit-content;
   margin: auto;
   display: flex;
@@ -308,8 +308,8 @@ body input, body textarea {
   margin-right: 36px;
 }
 .footer > .footer__below {
-  width: 1140px;
-  margin: 44px 0 70px;
+  width: 85%;
+  margin: 44px auto 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -328,7 +328,7 @@ body input, body textarea {
 
 @media screen and (max-width: 1000px) {
   .header {
-    width: 960px;
+    width: 96%;
     height: 80px;
     margin: 0 auto;
     justify-content: space-between;
@@ -345,7 +345,7 @@ body input, body textarea {
     padding-bottom: 70px;
   }
   .contact > .contact__input {
-    width: 960px;
+    width: 96%;
     margin: 70px auto;
   }
   .contact > .contact__input > .input-form {
@@ -387,14 +387,14 @@ body input, body textarea {
   }
 
   .project, .footer {
-    width: 960px;
+    width: 96%;
   }
 
   .footer > .footer__nav {
-    width: 960px;
+    width: 96%;
   }
   .footer > .footer__below {
-    width: 960px;
+    width: 96%;
   }
 }
 @media screen and (max-width: 800px) {
@@ -418,7 +418,7 @@ body input, body textarea {
     padding-bottom: 70px;
   }
   .home > .contact__input {
-    width: 720px;
+    width: 90%;
     margin: 70px auto;
   }
   .home > .contact__input > .input-form {
@@ -460,7 +460,7 @@ body input, body textarea {
   }
 
   .header {
-    width: 720px;
+    width: 90%;
     height: 80px;
     margin: 0 auto;
     justify-content: space-between;
@@ -475,7 +475,7 @@ body input, body textarea {
   }
 
   .project, .footer {
-    width: 720px;
+    width: 90%;
   }
 
   .contact {
@@ -484,7 +484,7 @@ body input, body textarea {
     padding-bottom: 70px;
   }
   .contact > .contact__input {
-    width: 720px;
+    width: 90%;
     margin: 70px auto;
   }
   .contact > .contact__input > .input-form {
@@ -550,14 +550,16 @@ body input, body textarea {
     margin-top: 34px;
   }
   .footer > .footer__nav {
-    width: 720px;
+    width: 90%;
   }
   .footer > .footer__nav > .nav__list {
     display: none;
   }
   .footer > .footer__below {
     margin-top: 20px;
-    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
   .footer > .footer__below > .termsOfService > a {
     padding: 0px 16px;
@@ -568,7 +570,7 @@ body input, body textarea {
     border-right: none;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .home {
     width: 100%;
     background-size: cover;
@@ -585,7 +587,7 @@ body input, body textarea {
   }
 
   .header {
-    width: 375px;
+    width: 93%;
     height: 80px;
     margin: 0 auto;
     justify-content: space-between;
@@ -607,13 +609,13 @@ body input, body textarea {
   }
   .contact .contact__content > .contact-content_description {
     margin: auto;
-    width: 345px;
+    width: 77%;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
   }
   .contact > .contact__input {
-    width: 375px;
+    width: 93%;
     margin: 70px auto;
     grid-auto-columns: 1fr;
     grid-template-areas: "inputs";
@@ -657,7 +659,7 @@ body input, body textarea {
   }
 
   .project, .footer {
-    width: 375px;
+    width: 93%;
   }
 
   .project > .project__grid {
@@ -692,7 +694,7 @@ body input, body textarea {
     margin-top: 34px;
   }
   .footer > .footer__nav {
-    width: 375px;
+    width: 93%;
     flex-direction: column;
   }
   .footer > .footer__nav > .nav__list {
@@ -707,7 +709,7 @@ body input, body textarea {
   .footer > .footer__below {
     order: 3;
     margin-top: 20px;
-    width: 375px;
+    width: 93%;
     flex-direction: column;
   }
   .footer > .footer__below > .copyright {

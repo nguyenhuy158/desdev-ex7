@@ -10,7 +10,7 @@ $primaryBackground: #C4C4C4
 $secondBackground: #121212
 $primaryColor: #333333
 $secondColor: #fff
-$widthContainer: 1144px
+$widthContainer: 85%
 body
 	background: $primaryBackground
 	// font-family: Roboto, sans-serif
@@ -322,8 +322,8 @@ body
 	> .slide
 		// margin: 0
 	> .footer__below
-		width: 1140px
-		margin: 44px 0 70px
+		width: $widthContainer
+		margin: 44px auto 70px
 		display: flex
 		justify-content: space-between
 		align-items: center
@@ -342,7 +342,7 @@ body
 				border-right: 1px solid rgba(51, 51, 51, 0.3)
 
 @media screen and (max-width: 1000px)
-	$widthContainer: 960px
+	$widthContainer: 96%
 
 	.header
 		width: $widthContainer
@@ -424,7 +424,7 @@ body
 			width: $widthContainer
 
 @media screen and (max-width: 800px)
-	$widthContainer: 720px
+	$widthContainer: 90%
 
 	.home
 		width: 100%
@@ -590,6 +590,8 @@ body
 
 		> .footer__below
 			margin-top: 20px
+			margin-left: auto
+			margin-right: auto
 			width: $widthContainer
 
 			> .termsOfService
@@ -600,8 +602,8 @@ body
 					padding-right: 0
 					border-right: none
 
-@media screen and (max-width: 400px)
-	$widthContainer: 375px
+@media screen and (max-width: 450px)
+	$widthContainer: 93%
 
 	.home
 		width: 100%
@@ -647,7 +649,7 @@ body
 				font-size: 24px
 			> .contact-content_description
 				margin: auto
-				width: 345px
+				width: 77%
 				font-weight: 400
 				font-size: 16px
 				line-height: 26px
